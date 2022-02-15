@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html()和text()</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            // 获取内容
+            var strHtml = $("p").html();
+            var strText = $("p").text();
+            $("#txt1").val(strHtml);
+            $("#txt2").val(strText);
+
+            // 设置内容
+            $("#btn1").click(function () {
+                $("ul li:nth-child(1)").html("<h3>你好</h3>")
+            })
+            $("#btn2").click(function () {
+                $("ul li:nth-child(2)").text("<h3>你好</h3>")
+            })
+        })
+    </script>
+</head>
+<body>
+    <p><strong style="color:red">段落</strong></p>
+    html()是：<input id="txt1" type="text" /><br/>
+    text()是：<input id="txt2" type="text" />
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <input id="btn1" type="button" value="html()方法设置列表第一项" />
+    <input id="btn2" type="button" value="text()方法设置列表第二项" />
+</body>
+</html>

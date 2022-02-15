@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-插入元素</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                var li = "<li>用prepend()方法在无序列表<b>内部</b>添加的元素</li>";
+                $("ul").prepend(li);
+            })
+            $("#btn2").click(function () {
+                var li = "<li>用append()方法在无序列表<b>内部</b>添加的元素</li>";
+                $("ul").append(li);
+            })
+            $("#btn3").click(function () {
+                var li = "<p>用before()方法在无序列表<b>外部</b>添加的元素</p>";
+                $("ul").before(li);
+            })
+            $("#btn4").click(function () {
+                var li = "<p>用after()方法在无序列表<b>外部</b>添加的元素</p>";
+                $("ul").after(li);
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>无序列表中的元素A</li>
+        <li>无序列表中的元素B</li>
+    </ul>
+    <input id="btn1" type="button" value="prepend()方法" />
+    <input id="btn2" type="button" value="append()方法" />
+    <input id="btn3" type="button" value="before()方法" />
+    <input id="btn4" type="button" value="after()方法" />
+</body>
+</html>

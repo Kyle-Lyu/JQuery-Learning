@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$.post()方法</title>
+    <script src="../static/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $("#send1").click(function () {
+                $.post("/post_text",
+                    { name: $("#name").val(), email: $("#email").val() },  // 发送到服务器的数据
+                    function (data) {
+                        console.log(data)
+                        $("#data").html(data); // 把返回的数据添加到页面上
+                    },
+                    type="text"
+                );
+            })
+            $("#send2").click(function () {
+                $.post("/post_json",
+                    { name: $("#name").val(), email: $("#email").val() },  // 发送到服务器的数据
+                    function (data) {
+                        console.log(data)
+                        // 解析服务器返回的json数据
+                        name=data['name']
+                        email=data['email']
+                        result="用户姓名为" + name + "，用户邮箱为" + email+"(JSON解析)"
+                        $("#data").html(result); // 把返回的数据添加到页面上
+                    },
+                    type="json"
+                );
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form>
+        <p>姓名: <input id="name" type="text" /></p>
+        <p>邮箱: <input id="email" type="text" /></p>
+        <p><input id="send1" type="button" value="提交（返回格式为字符串）" /></p>
+        <p><input id="send2" type="button" value="提交（返回格式为JSON）" /></p>
+    </form>
+    <h3>服务器传输回来的数据：</h3>
+    <div id="data"></div>
+</body>
+
+</html>

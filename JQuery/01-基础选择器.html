@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-基础选择器</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $("#idname").css("color","blue");
+            $(".classname").css("color","green");
+            $("div").css("color","red");
+        })
+    </script>
+</head>
+<body>
+    <p id="idname">id选择器</p>
+    <p class="classname">类选择器</p>
+    <div>标签选择器</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-属性操作</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $("#get_src").click(function () {
+                alert($("#pic").attr("src"));
+            });
+            $("#set_src").click(function () {
+                $("#pic").attr("src", "./images/cat02.png");
+            });
+            $("#delete_src").click(function () {
+                $("#pic").removeAttr("src");
+            });
+        })
+    </script>
+</head>
+<body>
+    <input id="get_src" type="button" value="获取图片src属性值"/>
+    <input id="set_src" type="button" value="修改图片src属性值"/>
+    <input id="delete_src" type="button" value="删除图片src属性值"/>
+    <br/><img id="pic" src="./images/cat01.png" alt="这是一只猫的图片" height=243 width=336 />
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-遍历元素</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("li").each(function (index, element) {
+                    var txt = "第" + (index + 1) + "个元素";
+                    $(element).text(txt);
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <input id="btn" type="button" value="添加内容" />
+</body>
+</html>

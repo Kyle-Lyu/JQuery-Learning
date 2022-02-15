@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-加载事件</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $("div").click(function(){
+                //$(this)等价于$("div")
+                $(this).css("color", "red");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>点击更改文本颜色</div>
+</body>
+</html>

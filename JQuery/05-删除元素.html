@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-删除元素</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $(".remove li:first-child").remove();
+            })
+            $("#btn2").click(function () {
+                $(".empty li:first-child").empty();
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul class="remove">
+        <li>测试remove()方法-<span>1</span></li>
+        <li>测试remove()方法-<span>2</span></li>
+        <li>测试remove()方法-<span>3</span></li>
+    </ul>
+    <input id="btn1" type="button" value="remove()方法" />
+
+    <ul class="empty">
+        <li>测试empty()方法-<span>1</span></li>
+        <li>测试empty()方法-<span>2</span></li>
+        <li>测试empty()方法-<span>3</span></li>
+    </ul>
+    <input id="btn2" type="button" value="empty()方法" />
+</body>
+</html>

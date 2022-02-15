@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-样式操作</title>
+    <style type="text/css">
+        div {
+            background-color: pink;
+        }
+        .select {
+            font-weight: bold;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                // 获取当前背景颜色样式
+                var result = $("div").css("background-color");
+                alert("background-color样式为：" + result);
+            });
+            $("#btn2").click(function () {
+                // 设置背景颜色为橙色
+                $("div").css("background-color", "orange");
+            });
+            $("#btn3").click(function () {
+                // 添加字体加粗样式类
+                $("div").addClass("select");
+            });
+            $("#btn4").click(function () {
+                // 删除字体加粗样式类
+                $("div").removeClass("select");
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>内容</div>
+    <input id="btn1" type="button" value="获取背景颜色样式" />
+    <input id="btn2" type="button" value="设置背景颜色样式" />
+    <input id="btn3" type="button" value="添加字体样式类" />
+    <input id="btn4" type="button" value="删除字体样式类" />
+</body>
+</html>
